@@ -1,0 +1,35 @@
+1. ESP32 Controller (ESP32-DOWDQ6)
+
+A powerful dual-core microcontroller with built-in Wi-Fi, Bluetooth, ADCs, multiple UART ports, and GPIOs used to control all sensors and communication modules.
+
+2. GPS Module (NEO-6M)
+
+A satellite-based positioning module that provides real-time latitude and longitude data for tracking and emergency location alerts.
+
+3. Temperature Sensor (DS18B20)
+
+A digital temperature sensor using the OneWire protocol to accurately measure body temperature with high precision.
+
+4. Heart Rate Sensor (MAX30102 / Equivalent)
+
+An optical sensor that uses infrared and red light to measure heart rate and oxygen saturation (SpO₂) through photoplethysmography.
+
+5. Gas Sensor (MQ135 / Equivalent)
+
+Detects harmful gases such as CO₂, NH₃, NOx, and smoke; provides an analog output proportional to gas concentration for safety monitoring.
+
+6. LCD Display (16×2 LCD)
+
+A character display module that shows real-time data such as temperature, heart rate, gas levels, and system status using I²C communication.
+
+7. Relay Board (Single-Channel)
+
+An electrically controlled switch used to operate high-power devices like Peltier modules for automatic temperature regulation.
+
+8. GSM Modem (SIM800L)
+
+A GSM/GPRS communication module used to send emergency SMS alerts and transmit health data to a predefined mobile number.
+
+9. Battery
+
+Provides portable power to the system, especially required for the GSM module which needs stable 3.7–4.2V with high current capability.
