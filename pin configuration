@@ -1,0 +1,21 @@
+| **SI. No.** | **Component**                    | **Pin Configuration (ESP32 GPIO)**                             | **Notes**                                  |
+| ----------- | -------------------------------- | -------------------------------------------------------------- | ------------------------------------------ |
+| **1**       | **ESP32 Controller**             | —                                                              | Main microcontroller                       |
+| **2**       | **GPS Module (NEO-6M)**          | **RX (GPS TX) → GPIO 16**  <br> **TX (GPS RX) → GPIO 17**      | Uses **UART1**                             |
+| **3**       | **Temperature Sensor (DS18B20)** | **Data → GPIO 4**                                              | OneWire protocol (4.7k pull-up required)   |
+| **4**       | **Heart Rate Sensor (MAX30102)** | **SDA → GPIO 21** <br> **SCL → GPIO 22**                       | I²C communication                          |
+| **5**       | **Gas Sensor (MQ135)**           | **AOUT → GPIO 35 (ADC1_CH7)**                                  | Analog input                               |
+| **6**       | **LCD Display (16×2 I²C)**       | **SDA → GPIO 21** <br> **SCL → GPIO 22**                       | Shares I²C bus                             |
+| **7**       | **Relay Board**                  | **Signal/IN → GPIO 5**                                         | Controls Peltier/heater                    |
+| **8**       | **GSM Module (SIM800L)**         | **TX → GPIO 26 (ESP32 RX2)** <br> **RX → GPIO 27 (ESP32 TX2)** | Uses **UART2**, requires external 3.7–4.2V |
+| **9**       | **Battery**                      | **VIN / 5V → ESP32 5V** <br> **GND → Common Ground**           | GSM must use Li-ion battery                |
+
+
+
+extra components usage
+| Purpose                   | Pin Used       | Type                    |
+| ------------------------- | -------------- | ----------------------- |
+| **Buzzer / Alert**        | GPIO 18        | Output (PWM)            |
+| **SOS Button**            | GPIO 19        | Digital Input (Pull-up) |
+| **Peltier Power Control** | Relay → GPIO 5 | Output                  |
+| **I²C Bus Shared By**     | GPIO 21, 22    | LCD, BMP180, MAX30102   |
